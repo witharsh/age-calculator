@@ -1,0 +1,187 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Purple: hsl(259, 100%, 69%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+.container {
+  min-height: 100vh;
+  background-color: var(--Off-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-body {
+  border-radius: 20px;
+  border-bottom-right-radius: 30%;
+  width: 600px;
+  height: 500px;
+  background-color: var(--White);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.input-area {
+  padding-right: 80px;
+  position: relative;
+  width: 90%;
+  height: 35%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  border-bottom: 1px solid var(--Light-grey);
+}
+
+.lable {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding-left: 11%;
+  display: flex;
+  align-items: flex-end;
+  color: var(--Smokey-grey);
+  text-transform: uppercase;
+}
+
+.input-box {
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+input:focus {
+  outline: 1px solid var(--Purple);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  width: 80%;
+  height: 90%;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid var(--Light-grey);
+  padding: 0px 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  caret-color: var(--Purple);
+}
+
+input:hover {
+  border: 1px solid var(--Purple);
+  cursor: pointer;
+}
+
+.error {
+  color: var(--Light-red);
+  padding-left: 11%;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+#cal-btn {
+  position: absolute;
+  padding: 20px;
+  bottom: -37px;
+  justify-self: end;
+  background-color: var(--Purple);
+  border: none;
+  border-radius: 50%;
+}
+
+#cal-btn:hover {
+  background-color: var(--Off-black);
+  cursor: pointer;
+}
+
+.output-area {
+  width: 90%;
+  height: 60%;
+  padding: 20px;
+}
+
+.result {
+  font-size: 62px;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--Off-black);
+}
+
+.result-num {
+  color: var(--Purple);
+}
+
+@media (max-width: 450px) {
+  .calculator-body {
+    width: 90%;
+    height: 550px;
+  border-bottom-right-radius: 40%;
+    
+  }
+
+  .input-area {
+    padding-right: 0px;
+    width: 95%;
+    height: 45%;
+    display: grid;
+  }
+
+  .lable {
+    padding-left: 13%;
+  }
+
+  input {
+    text-align: center;
+    height: 80%;
+    padding: 0px 0px;
+    font-size: 20px;
+  }
+  .error {
+    font-size: 10px;
+  }
+
+  #cal-btn {
+    justify-self: center;
+  }
+
+  .output-area {
+    width: 95%;
+    height: 55%;
+    padding: 50px 10px 10px 10px;
+  }
+
+  .result {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 320px) {
+    .result {
+      font-size: 35px;
+    }
+  }
