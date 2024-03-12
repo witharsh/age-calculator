@@ -139,8 +139,8 @@ input:hover {
 @media (max-width: 450px) {
   .calculator-body {
     width: 90%;
-    height: 550px;
-  border-bottom-right-radius: 40%;
+    height: 500px;
+  border-bottom-right-radius: 30%;
     
   }
 
